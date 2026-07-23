@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ganapati Bappa Aagman 2026</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+background:#2b0000;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+url("ganpati.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.glow{
+text-shadow:0 0 10px gold,0 0 20px orange;
+}
+
+.card{
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,215,0,.3);
+}
+
+.btn{
+background:linear-gradient(45deg,#ffb300,#ff5722);
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px gold;
+}
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 180px;
+    }
+}
+
+.flower{
+position:fixed;
+top:-20px;
+font-size:20px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh) rotate(360deg);
+}
+}
+</style>
+<script>
+
+function welcomeBappa(){
+
+// Play Bell Sound
+let bell=new Audio("https://actions.google.com/sounds/v1/alarms/medium_bell_ringing_near.ogg");
+bell.play();
+
+// Show Welcome Text
+let text=document.getElementById("welcomeText");
+text.style.opacity="1";
+text.style.transform="scale(1.1)";
+
+setTimeout(()=>{
+text.style.transform="scale(1)";
+},500);
+
+// Create Flower Shower
+for(let i=0;i<50;i++){
+
+let flower=document.createElement("div");
+
+flower.innerHTML=["🌼","🌸","🌺","🌹"][Math.floor(Math.random()*4)];
+
+flower.style.position="fixed";
+flower.style.left=Math.random()*100+"vw";
+flower.style.top="-20px";
+flower.style.fontSize=(18+Math.random()*20)+"px";
+flower.style.zIndex="9999";
+flower.style.pointerEvents="none";
+flower.style.transition="4s linear";
+
+document.body.appendChild(flower);
+
+setTimeout(()=>{
+flower.style.top="110vh";
+flower.style.transform="rotate(720deg)";
+},50);
+
+setTimeout(()=>{
+flower.remove();
+},4000);
+
+}
+
+}
+
+
+</script>
+</head>
+
+<body class="text-white">
+<!-- Floating Navbar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 z-50
+bg-gradient-to-r from-red-900/80 via-red-800/80 to-red-900/80
+backdrop-blur-md border-2 border-yellow-400
+rounded-full px-6 py-3
+shadow-[0_0_25px_rgba(255,215,0,0.4)]">
+
+    <div class="flex flex-col md:flex-row items-center gap-3 md:gap-8">
+
+        <!-- Mandal Name -->
+        <h1 class="text-lg md:text-2xl font-bold text-yellow-300 tracking-[3px] whitespace-nowrap">
+            🕉️ ॥ दुर्गामाता गणेशोत्सव मंडळ ॥ 🕉️
+        </h1>
+
+        <!-- Countdown -->
+        <div class="bg-yellow-400/15 border border-yellow-300 rounded-full px-5 py-2">
+
+            <p class="text-xs text-yellow-200 text-center">
+                आगमनासाठी
+            </p>
+
+            <p id="navTimer"
+               class="text-white font-bold text-sm md:text-base text-center">
+                ...
+            </p>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero pt-25 md:pt-23">
+        <div class="max-w-7xl mx-auto h-screen flex flex-col md:flex-row items-center justify-between px-8">
+
+        <!-- Left Content -->
+        <div class="text-center md:text-left">
+
+            <h2 class="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-400 to-yellow-500">
+                ॥ तांबट गल्लीचा राजा ॥
+            </h2>
+
+            <h1 class="text-5xl md:text-7xl font-bold glow mt-4">
+                गणपती बाप्पा मोरया
+            </h1>
+
+            <h2 class="text-2xl md:text-3xl mt-4 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-400 to-yellow-500">
+                ✨ श्री गणपती बाप्पांच्या आगमन सोहळ्यास आपले मनःपूर्वक स्वागत ✨
+            </h2>
+
+           
+
+            <!-- Welcome Button -->
+            <button onclick="welcomeBappa()"
+                class="btn px-8 py-3 rounded-full mt-8 font-bold">
+                🙏 Welcome Bappa
+            </button>
+
+            <!-- Welcome Message -->
+            <h2 id="welcomeText"
+                class="text-4xl font-bold text-yellow-300 mt-8 opacity-0 transition-all duration-1000">
+                🌺 गणपती बाप्पा मोरया! 🌺
+            </h2>
+
+            <!-- Aagman Date & Time -->
+            <div class="mt-8 flex justify-center md:justify-start">
+
+                <div class="inline-flex items-center gap-4
+                    bg-gradient-to-r from-red-900/70 to-orange-900/70
+                    border-2 border-yellow-400
+                    rounded-2xl
+                    px-8 py-5
+                    backdrop-blur-md
+                    shadow-[0_0_25px_rgba(255,215,0,0.45)]">
+
+                    <div class="text-5xl">
+                        🪔
+                    </div>
+
+                    <div>
+                        <p class="text-yellow-300 text-sm uppercase tracking-[3px]">
+                            आगमन सोहळा
+                        </p>
+
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mt-1">
+                            📅 १४ सप्टेंबर २०२६
+                        </h3>
+
+                        <p class="text-lg text-yellow-200 mt-2 font-semibold">
+                            🕙 सकाळी १०:०० वाजता
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+           
+
+        </div>
+
+        <!-- Right Image -->
+        <div class="mt-12 md:mt-0">
+
+            <img src="Bappa.png"
+                alt="Ganapati Bappa"
+                class="w-72 md:w-[430px] drop-shadow-[0_0_40px_gold] animate">
+
+        </div>
+
+    </div>
+
+</section>
+<!-- About Section -->
+<section class="pt-24 pb-16 bg-red-950 text-center px-6">
+
+    <div class="max-w-4xl mx-auto">
+
+        <h2 class="text-4xl md:text-5xl font-bold text-yellow-300">
+            🙏 आमच्या बाप्पांविषयी
+        </h2>
+
+        <div class="w-24 h-1 bg-yellow-400 mx-auto rounded-full mt-4 mb-8"></div>
+
+        <p class="text-lg md:text-xl leading-9 text-gray-200">
+            तांबट गल्लीचा राजा हा आमच्या परिसराचा श्रद्धेचा आणि भक्तीचा
+            केंद्रबिंदू आहे. दरवर्षी भक्तिभावाने श्री गणरायाचे आगमन,
+            आरती, सांस्कृतिक कार्यक्रम, महाप्रसाद तसेच विविध सामाजिक
+            उपक्रमांचे आयोजन करण्यात येते. सर्व भक्तांच्या सहकार्यामुळे
+            हा उत्सव दरवर्षी अधिक भव्य आणि दिव्य स्वरूपात साजरा केला जातो.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Program Section -->
+<section class="py-16 bg-black text-white">
+
+<h2 class="text-center text-4xl font-bold text-yellow-300 mb-10">
+📅 कार्यक्रम
+</h2>
+
+<div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 px-6">
+
+<div class="card p-6 rounded-xl text-center">
+<h3 class="text-xl font-bold text-yellow-300">🪔 आगमन</h3>
+<p class="mt-3">सकाळी १०:०० वा.</p>
+</div>
+
+<div class="card p-6 rounded-xl text-center">
+<h3 class="text-xl font-bold text-yellow-300">🙏 महाआरती</h3>
+<p class="mt-3">सायंकाळी ७:३० वा.</p>
+</div>
+
+<div class="card p-6 rounded-xl text-center">
+<h3 class="text-xl font-bold text-yellow-300">🍛 महाप्रसाद</h3>
+<p class="mt-3">रात्री ८:३० वा.</p>
+</div>
+
+</div>
+
+</section>
+<section class="py-16 bg-red-950 px-6">
+
+    <h2 class="text-4xl font-bold text-center text-yellow-300 mb-3">
+        📸 २०२५ च्या अविस्मरणीय आठवणी
+    </h2>
+
+    <p class="text-center text-gray-300 mb-10">
+        तांबट गल्लीचा राजा गणेशोत्सव २०२५ मधील काही अविस्मरणीय क्षण...
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+        <div class="card p-4 rounded-xl">
+            <video
+        class="rounded-lg h-60 w-full object-cover"
+        controls
+        autoplay
+        muted
+        loop>
+        <source src="vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+            <h3 class="mt-4 text-yellow-300 text-xl font-semibold">
+                🪔 गणरायाचे आगमन
+            </h3>
+        </div>
+
+        <div class="card p-4 rounded-xl">
+            <img src="img1.jpg" class="rounded-lg h-60 w-full object-cover">
+            <h3 class="mt-4 text-yellow-300 text-xl font-semibold">
+                🙏 महाआरती
+            </h3>
+        </div>
+<div class="card p-4 rounded-xl">
+    <video
+        class="rounded-lg h-60 w-full object-cover"
+        controls
+        autoplay
+        muted
+        loop>
+        <source src="vid2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h3 class="mt-4 text-yellow-300 text-xl font-semibold">
+        🎉 मिरवणूक सोहळा
+    </h3>
+</div>
+      
+
+    
+
+</section>
+
+<!-- Rules -->
+<section class="py-16 bg-red-900 px-6">
+
+<h2 class="text-center text-4xl font-bold text-yellow-300">
+📜 भक्तांसाठी सूचना
+</h2>
+
+<div class="max-w-3xl mx-auto mt-8">
+
+<ul class="space-y-4 text-lg">
+
+<li>🌼 मंदिर परिसर स्वच्छ ठेवावा.</li>
+
+<li>🙏 दर्शनासाठी रांगेचे पालन करावे.</li>
+
+<li>📵 आरतीदरम्यान शांतता राखावी.</li>
+
+<li>❤️ सर्व भक्तांनी सहकार्य करावे.</li>
+
+</ul>
+
+</div>
+<div class="mt-6 flex justify-center">
+    <div class="bg-yellow-400/20 border border-yellow-300 rounded-full px-6 py-3 shadow-lg backdrop-blur-md">
+        <p class="text-yellow-300 font-semibold tracking-wider">
+            ✨ स्थापना वर्ष • २००७ ✨
+        </p>
+    </div>
+</div>
+
+</section>
+<section class="py-16 bg-black text-center">
+
+<h2 class="text-4xl text-yellow-300 font-bold">
+🪔 आरती वेळ
+</h2>
+
+<div class="mt-10 flex flex-wrap justify-center gap-6">
+
+<div class="card p-6 rounded-xl w-60">
+<h3 class="text-yellow-300 text-xl">सकाळची आरती</h3>
+<p class="mt-3">सकाळी ८:००</p>
+</div>
+
+<div class="card p-6 rounded-xl w-60">
+<h3 class="text-yellow-300 text-xl">सायंकाळची आरती</h3>
+<p class="mt-3">सायंकाळी ७:३०</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+<section class="py-16 bg-black text-center">
+
+<h2 class="text-4xl text-yellow-300 font-bold">
+📍 संपर्क
+</h2>
+
+<p class="mt-6 text-lg">
+तांबट गल्ली सार्वजनिक गणेशोत्सव मंडळ
+</p>
+<p class="text-lg leading-8">
+        हुळे प्लॉट,<br>
+        मालगाव,<br>
+        ता. मिरज, जि. सांगली,<br>
+        पिन - ४१६४०७
+    </p>
+
+<p class="mt-2">📞 +91 98765 43210</p>
+
+<p>📧 tambatgallicharaja@gmail.com</p>
+
+</section>
+
+<footer class="text-center py-8 bg-black">
+
+<p class="text-yellow-300 text-xl">
+वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।
+</p>
+
+<p class="mt-3 text-gray-400">
+© 2026 Ganapati Bappa Aagman
+</p>
+
+</footer>
+
+<script>
+const target = new Date("September 14, 2026 10:00:00").getTime();
+
+setInterval(() => {
+
+    let now = new Date().getTime();
+    let diff = target - now;
+
+    let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    document.getElementById("navTimer").innerHTML =
+        `${days} दिवस बाकी`;
+
+}, 1000);
+
+// Falling Flowers
+for(let i=0;i<20;i++){
+
+let f=document.createElement("div");
+
+f.className="flower";
+
+f.innerHTML="🌼";
+
+f.style.left=Math.random()*100+"vw";
+
+f.style.animationDuration=4+Math.random()*5+"s";
+
+f.style.opacity=Math.random();
+
+document.body.appendChild(f);
+
+}
+
+</script>
+
+</body>
+</html>
